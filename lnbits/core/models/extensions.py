@@ -409,7 +409,6 @@ class ExtensionRelease(BaseModel):
     ) -> ExtensionRelease:
         return ExtensionRelease(
             name=r.name,
-            description=r.name,
             version=r.tag_name,
             archive=r.zipball_url,
             source_repo=source_repo,
