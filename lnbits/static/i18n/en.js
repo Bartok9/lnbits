@@ -194,6 +194,7 @@ window.localisation.en = {
   wasm_sources_label:
     'WASM source URL (only use WASM extension sources you can trust)',
   warning: 'Warning',
+  use_with_caution: 'PLEASE USE WITH CAUTION - {name} Wallet is still BETA',
   repository: 'Repository',
   confirm_continue: 'Are you sure you want to continue?',
   manage_extension_details: 'Install/uninstall extension',
@@ -364,6 +365,12 @@ window.localisation.en = {
   notifications_send_to_emails: 'Emails to send to',
   notifications_send_to_emails_desc: 'Emails notifications will be sent to',
 
+  enable_notifications: 'Enable notifications',
+  enable_notifications_desc:
+    'If enabled, it will fetch the latest LNbits status updates, such as security incidents and updates.',
+  no_notifications: 'No notifications',
+  notifications_disabled: 'LNbits status notifications are disabled.',
+
   notification_settings_update: 'Settings updated',
   notification_settings_update_desc:
     'Send a notification when server settings have been updated',
@@ -485,6 +492,7 @@ window.localisation.en = {
   signin_with_oauth: 'Login with',
   signin_with_oauth_or: 'or Login with',
   signin_with_nostr: 'Continue with Nostr',
+  signin_with_keycloak: 'Sign in with Keycloak',
   signin_with_google: 'Sign in with Google',
   signin_with_github: 'Sign in with GitHub',
   signin_with_custom_org: 'Sign in with {custom_org}',
@@ -696,12 +704,15 @@ window.localisation.en = {
   audit_http_methods_hint:
     'List of HTTP methods to be logged. No value means all methods will be logged.',
   audit_http_methods_label: 'HTTP Methods to Log',
+  audit_resp_codes: 'Include HTTP Response Codes',
   audit_resp_codes_hint:
     'List of HTTP codes to be included (regex match). Empty lists means all. Eg: 4.*, 5.*',
   audit_resp_codes_label: 'HTTP Response Codes to Log (regex)',
+  audit_paths: 'Include paths',
   audit_paths_hint:
     'List of paths to be included (regex match). Empty list means all.',
   audit_paths_label: 'HTTP Paths to Log (regex)',
+  audit_paths_exclude: 'Exclude paths',
   audit_paths_exclude_hint:
     'List of paths to be excluded (regex match). Empty list means none.',
   audit_paths_exclude_label: 'HTTP Paths to Exclude from Logging (regex)',
@@ -738,12 +749,14 @@ window.localisation.en = {
   toggle_public_node_ui: 'Public Node UI',
   toggle_transactions_node_ui: 'Transactions Tab (Disable on large CLN nodes)',
   invoice_expiry: 'Invoice Expiry',
+  invoice_expiry_label: 'Invoice expiry (seconds)',
   routing_fee_reserve_calculations: 'Routing Fee Reserve Calculations',
   routing_fee_reserve_calculations_desc:
     'LNbits sets aside a “reserve amount” for each payment to cover routing fees. The maximum routing fee passed to the funding source is whichever is higher: the <strong>minimum routing fee reserve</strong> or the <strong>routing fee reserve percentage</strong>.',
   millisats: 'millisats',
   sats: 'sats',
   fee_reserve: 'Minimum Routing Fee Reserve',
+  fee_reserve_msats: 'Reserve fee in msats',
   fee_reserve_percent: 'Routing Fee Reserve Percentage',
   fee_reserve_min_hint:
     'The minimum fee reserved per payment.<br>This acts as a floor - the maximum allowed routing fee will never be lower than this value regardless of payment size.',
@@ -765,6 +778,7 @@ window.localisation.en = {
     'Controls how long LNbits waits for an outgoing payment attempt to confirm before marking it as pending. Higher values help when paying slow-settling invoices (e.g., HODL invoices, Boltz). The payment will be rechecked later and updated automatically or manually.',
   server_management: 'Server Management',
   base_url_label: 'Base URL of the server',
+  base_url: 'Base URL',
   authentication: 'Authentication',
   auth_token_expiry_label: 'Token expiry',
   auth_token_expiry_hint: 'Time in minutes until the token expires',
@@ -831,10 +845,14 @@ window.localisation.en = {
   service_fee_max_label: 'Maximum Service Fee Limit',
   service_fee_max_hint: 'Maximum service fee to charge in (sats)',
   fee_wallet_label: 'Service Fee Wallet ID',
+  fee_wallet: 'Fee wallet',
   fee_wallet_hint: 'The ID of the wallet to which to send service funds',
   disable_fee: 'Disable Service Fees for Internal Payments',
   disable_fee_desc:
     'Do not charge fees when both wallets are on this instance.',
+  disable_fee_internal: 'Disable service fee for internal payments',
+  disable_fee_internal_desc:
+    'Disable service fee for internal Lightning payments',
   ui_management: 'UI Management',
   ui_site_title: 'Site Title',
   ui_changing_remove_lnbits_elements:
@@ -883,7 +901,9 @@ window.localisation.en = {
     'Configure the advertisement space on the wallet sidebar.',
   ad_space_title: 'Advertisement Space Title',
   ad_space_title_hint: 'Title shown above the advertisement space',
+  ad_space_title_label: 'Supported by',
   ad_slots: 'Advertisement Slots',
+  ad_slots_label: 'Format: url;img_light_url;img_dark_url, url...',
   ad_slots_hint:
     'Advertisement image filepaths in CSV format, extensions can choose to honor. Format: url;img_light_url;img_dark_url, url..',
   ads_enabled: 'Enable Advertisement',
